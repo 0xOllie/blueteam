@@ -1,2 +1,6 @@
-/nginx/content/files
+/toolkit/content/files
 .DS_Store
+beacon_win_64.exe
+beacon_win_32.exe
+beacon_linux_64
+beacon_linux_32
