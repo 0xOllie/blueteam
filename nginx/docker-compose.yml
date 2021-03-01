@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  blueteam-nginx:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./content:/usr/share/nginx/html:ro

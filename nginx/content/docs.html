@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blueteaming Toolkit</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="98.css" /> -->
+    <link rel="stylesheet" href="xp.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/xp.css" /> -->
+</head>
+<style>
+    hr {
+        margin: 0;
+        border: none;
+        width: 100%;
+        height: 1px;
+        opacity: 0.5;
+        background: linear-gradient(to right, red 20%, yellow 20%, yellow 36%, green 36%, green 60%, blue 60%, blue 100%);
+    }
+
+    body {
+        margin: 10%;
+        background-image: url("bkg.jpg");
+        background-repeat: repeat;
+    }
+
+    .window {
+        width: 80%;
+    }
+
+    h4 {
+        margin: 10px;
+    }
+
+    #closed {
+        visibility: hidden;
+    }
+</style>
+<script>
+    function closeWindow(element) {
+        document.getElementsByClassName('window')[0].remove();
+        document.getElementById('closed').style.visibility = 'visible';
+    }
+
+    function minimiseWindow(element) {
+        document.getElementsByClassName('window-body')[0].style.visibility = 'hidden';
+        document.getElementsByClassName('window')[0].style.height = '20px';
+    }
+
+    function maximiseWindow(element) {
+        document.getElementsByClassName('window-body')[0].style.visibility = 'visible';
+        document.getElementsByClassName('window')[0].style.height = 'auto';
+    }
+</script>
+
+<body>
+    <center>
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text">Blueteam Tools</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize" onclick="minimiseWindow()"></button>
+                    <button aria-label="Maximize" onclick="maximiseWindow()"></button>
+                    <button aria-label="Close" onclick="closeWindow()"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img src="./logo.png" width="20%" float= right>
+                <h4>CrikeyCon Red vs Blue CTF</h4>
+                <br>
+                <iframe src="/files" title="Files" width="100%" height="300px"></iframe> 
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>
